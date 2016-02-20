@@ -5,4 +5,4 @@
 ﻿https://www.instagram.com/p/BB8UWnuxhSV/?taken-by=dvdktn
 ﻿
 ﻿Requires:
-2 Channel RC Transmitter and Reciever, HC-SR04 ultrasonic range detector, L298N Motor Drive Controller Board DC Dual H-Bridge, Arduino Uno or equivilant imitation, Two DC brushed motors, Chassis Battery (8V to 12V), Some soldering may be required
+2 Channel RC Transmitter and Reciever, HC-SR04 ultrasonic range detector, L298N Motor Drive Controller Board DC Dual H-Bridge, Arduino Uno or equivilant imitation, Two DC brushed motors, Chassis, Battery (8V to 12V), Some soldering may be required
