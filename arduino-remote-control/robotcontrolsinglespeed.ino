@@ -31,35 +31,50 @@ delay(100);
 xmove = map(x, 994, 1980, -100, 100);
 ymove = map(y, 994, 1980, -100, 100);
 
+
+stoppedorreverse();
+moveforward();
+moveleft();
+moveright();
+
+}
+
+int moveforward(void){
 if (ymove>=10) { //move forward
   analogWrite(leftreverse,0);
   analogWrite(rightreverse,0);
   analogWrite(leftforward, speed);
   analogWrite(rightforward, speed);
   }
-else if (ymove>=-10&&xmove>=-10&&xmove<10) { //stop
+}
+int stoppedorreverse(void){
+if (ymove>=-10&&xmove>=-10&&xmove<10) { //stop
   analogWrite(leftforward,0);
   analogWrite(rightforward,0);
   analogWrite(leftreverse,0);
   analogWrite(rightreverse,0);
   }
-else if (ymove>=-10&&xmove<-10) { //move left
+  else
+  { // reverse
   analogWrite(leftforward,0);
-  analogWrite(rightforward,speed);
+  analogWrite(rightforward,0);
   analogWrite(leftreverse,speed);
-  analogWrite(rightreverse,0);
+  analogWrite(rightreverse,speed);
   }
-else if (ymove>=-10&&xmove>=10) { //move right
+}
+int moveleft(void) {
+if (ymove>=-10&&xmove<-10) { //move left
   analogWrite(leftforward,speed);
-  analogWrite(rightforward,0);
+  analogWrite(rightforward,speed*2);
   analogWrite(leftreverse,0);
-  analogWrite(rightreverse,speed);
+  analogWrite(rightreverse,0);
   }
-else { // reverse
-  analogWrite(leftforward,0);
-  analogWrite(rightforward,0);
-  analogWrite(leftreverse,speed);
-  analogWrite(rightreverse,speed);
+}
+int moveright(void){
+if (ymove>=-10&&xmove>=10) { //move right
+  analogWrite(leftforward,speed*2);
+  analogWrite(rightforward,speed);
+  analogWrite(leftreverse,0);
+  analogWrite(rightreverse,0);
   }
-
 }
