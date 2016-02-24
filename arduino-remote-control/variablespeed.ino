@@ -48,6 +48,7 @@ if (ymove>=10) { //move forward
   analogWrite(rightforward, ymove);
   }
 }
+
 int stoppedorreverse(void){
 if (ymove>=-10&&xmove>=-10&&xmove<10) { //stop
   analogWrite(leftforward,0);
@@ -55,14 +56,29 @@ if (ymove>=-10&&xmove>=-10&&xmove<10) { //stop
   analogWrite(leftreverse,0);
   analogWrite(rightreverse,0);
   }
-  else
-  { // reverse
+  else if(ymove<-10&&xmove<-10)
+  { // reverse left
   analogWrite(leftforward,0);
   analogWrite(rightforward,0);
   analogWrite(leftreverse,-ymove);
+  analogWrite(rightreverse,0);
+  }
+  else if(ymove<-10&&xmove>10)
+  { // reverse right
+  analogWrite(leftforward,0);
+  analogWrite(rightforward,0);
+  analogWrite(leftreverse,0);
   analogWrite(rightreverse,-ymove);
   }
+  else //reverse
+  {
+  analogWrite(leftforward,0);
+  analogWrite(rightforward,0);
+  analogWrite(leftreverse,-ymove);
+  analogWrite(rightreverse,-ymove); 
+  }
 }
+
 int moveleft(void) {
 if (ymove>=-10&&xmove<-10) { //move left
   analogWrite(leftforward,ymove*.5);
@@ -71,6 +87,7 @@ if (ymove>=-10&&xmove<-10) { //move left
   analogWrite(rightreverse,0);
   }
 }
+
 int moveright(void){
 if (ymove>=-10&&xmove>=10) { //move right
   analogWrite(leftforward,ymove*2);
