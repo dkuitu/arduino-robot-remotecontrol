@@ -81,8 +81,8 @@ if (ymove>=-10&&xmove>=-10&&xmove<10) { //stop
 
 int moveleft(void) {
 if (ymove>=-10&&xmove<-10) { //move left
-  analogWrite(leftforward,ymove*.5);
-  analogWrite(rightforward,ymove*2);
+  analogWrite(leftforward,ymove*.8);
+  analogWrite(rightforward,ymove*1.6);
   analogWrite(leftreverse,0);
   analogWrite(rightreverse,0);
   }
@@ -90,8 +90,8 @@ if (ymove>=-10&&xmove<-10) { //move left
 
 int moveright(void){
 if (ymove>=-10&&xmove>=10) { //move right
-  analogWrite(leftforward,ymove*2);
-  analogWrite(rightforward,ymove*.5);
+  analogWrite(leftforward,ymove*1.6);
+  analogWrite(rightforward,ymove*.8);
   analogWrite(leftreverse,0);
   analogWrite(rightreverse,0);
   }
