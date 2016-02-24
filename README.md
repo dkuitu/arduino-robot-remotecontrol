@@ -1,6 +1,6 @@
 ﻿# arduino-robot-remotecontrol
 ﻿A remote control TX and RX to control an arduino robot
-﻿This is a rough draft just to get started on the project. I want to eventually make it variable speed. Also it doesn't turn well so I will be adjusting that also.
+﻿This is a rough draft just to get started on the project. I have two .ino files. One has variable speeds and turning, the other is single speed.
 ﻿
 ﻿https://www.instagram.com/p/BB8UWnuxhSV/?taken-by=dvdktn
 
